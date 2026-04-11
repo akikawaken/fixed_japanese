@@ -1263,6 +1263,8 @@ Company
   you_boughtout={company}があなたの会社を買収し、経営権と所有権を掌握しました。これは敵対的買収でしたが、十分な額の提示があれば、誰でも屈するものです。;
   you_lost_city=残念ながらあなたは解雇されました。{city}が長期間過密状態でした。;
   you_lost_country=取締役会が求める継続的な拡大を行いませんでした。そのため、あなたは解雇されました。;
+  cooperation=協力;
+  coop_team=チーム;
   your_company=あなたの会社;
   company=会社;
   companies=企業;
