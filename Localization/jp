@@ -621,6 +621,11 @@ Entities
   vehicle_stratus_236=ストラタス236;
   vehicle_stratus_420=ストラタス420;
   vehicle_stratus_575=ストラタス575;
+  vehicle_kirin=キリンジェット;
+  vehicle_sonic=ソニック;
+  vehicle_kestrel=ケストレル-144;
+  vehicle_boom=ブーム;
+  vehicle_balloon=ザ・バルーン;
   vehicle_akka=アッカ;
   vehicle_ortler=オルトラー;
   vehicle_cinto=シント;
