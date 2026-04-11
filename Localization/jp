@@ -2,7 +2,7 @@
 Order
 {
   date={year}年{month}月{day}日;
-  date_n={0}{1}{2};
+  date_n={0}-{1}-{2};
 }
 
 Currency
@@ -1903,7 +1903,7 @@ Mods
   d_vehicle_range=航空機の最大連続航続距離。;
   d_vehicle_max_wagons=列車が使用できる定義された容量の車両数。;
   d_vehicle_cost_per_wagon=輸送ごとに車両1台にかかる金額。;
-  d_ai_can_use=AIがこの車両を購入可能かどうか。;
+  d_ai_can_use=AIがこの車両を購入することを許可するかどうか。;
   d_company_region=輸入が計算されない経度地域。;
   d_company_country=会社の国。;
   d_starting_loan=全ての会社が開始時に持っているローン額。;
@@ -1987,9 +1987,9 @@ Mods
   d_region_longitude=地域の経度の開始値と終了値。;
   d_region_latitude=地域の緯度の開始値と終了値。;
   d_region_ai_limit=最大AI数。;
-  d_currency_symbol=通貨のシンボル。ドルの場合は「$」です。;
-  d_currency_code=通貨のISOコードドルの場合は「USD」です。;
-  d_currency_factor=通過価値の係数。デフォルトですべての価値はドルです。ドルはゲーム内アイテムの価格と1:1になっています。;
+  d_currency_symbol=通貨のシンボル。 米ドルの場合は「$」です。;
+  d_currency_code=通貨のISOコード。 米ドルの場合は「USD」です。;
+  d_currency_factor=通貨価値の係数。 デフォルトですべての価値はドルです。ドルはゲーム内アイテムの価格と1:1になっています。;
   d_currency_order=どのように通貨を表示するか。通貨に応じて{symbol}と{amount}を正しい順番で使用してください。<>の中の!nbは、通貨のテキストが途中で改行されるのを防ぎます。;
   existing_item=既存のアイテムを選択;
   usage=MODのシステムを使って新しいコンテンツを作成したり、既存のものを編集したりできます。変更を確認するには、再ロードボタンを押してください。複数の翻訳を準備したい場合は、言語ボタンを使ってMODの言語を変更してください。;
@@ -1997,7 +1997,7 @@ Mods
 
 Multiplayer
 {
-  quit_multiplayer=マルチプレイヤーセッションを退出しますか？;
+  quit_multiplayer=マルチプレイヤーセッションから退出しますか？;
   multiplayer_ended=マルチプレイヤーセッションが終了しました;
   disconnect=切断;
   desync_detected=ゲーム状態の同期ズレを検知しました。ゲームを続行することはできますが、時間が経つにつれてズレが大きくなります。同期ズレを修復するには、セーブデータを再ロードして接続し直してください。;
