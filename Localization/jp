@@ -1711,7 +1711,7 @@ CompanyNameGen
   ship_01={country}航海;
   ship_02={country}クルーズ;
   ship_03={country}航行;
-  ship_04={country}ロイヤル海運;
+  ship_04={country}海運;
   ship_05={country}フェリー;
   ship_06={country}ライン;
   fleet_01={country}ホールディングス;
