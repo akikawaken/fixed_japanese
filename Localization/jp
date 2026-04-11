@@ -1218,7 +1218,9 @@ Infrastructure
   planes_only=航空機のみ;
   ships_only=船舶のみ;
   build_road=道路を建設;
+  build_all_road=全ての道路を建設;
   build_rails=鉄道を敷設;
+  build_all_rails=全ての鉄道を敷設;
   road_mode_default=デフォルトモード;
   road_mode_default_info={key}を押して新しい道路ノードと接続を追加します。{key}を押し続けるとノードを移動できます。;
   road_mode_free=自由モード;
