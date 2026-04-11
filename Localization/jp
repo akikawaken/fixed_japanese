@@ -1792,14 +1792,11 @@ Tutorial
 
 Mods
 {
-  remove_a_city_q={name} を削除しますか?;
-  remove_sea_nodes=航路ノードを削除;
-  draw_sea_nodes=航路ノードを描く;
-  resort=リゾート;
-  important=主要都市;
-  name_inverted=都市名の表示位置;
   workshop_header=MODでゲームをより良いものに;
   workshop_info=新しい車両、新しい都市、新しいバランス調整などを発見しましょう。クリック1つでWorldwide RushにMODを追加できます。;
+  mods_missing=MODがありません;
+  reload_with_mods=先程と同じMODが有効ではありません。そのMODを有効化してゲームを再ロードしますか？;
+  reload_failed=一部のMODのロードに失敗しました。;
   my_mods=MOD;
   create_a_mod=MODを作成;
   delete_mod=MODを削除;
@@ -1807,6 +1804,7 @@ Mods
   rename_variable=変数の名前を変更;
   friends_mods=友達のMOD;
   all_mods=全てのMOD;
+  load_priority=ロード優先度;
   enable_mod=MODを有効化;
   disable_mod=MODを無効化;
   edit_mod=MODを編集;
@@ -1860,11 +1858,17 @@ Mods
   select_countries=国を選択;
   add_a_city=都市を追加;
   remove_a_city=都市を削除;
+  remove_a_city_q={name}を削除しますか？;
   remove_road_nodes=道路ノードを削除;
   draw_road_nodes=道路ノードを描く;
   remove_rail_nodes=鉄道ノードを削除;
   draw_rail_nodes=鉄道ノードを描く;
+  remove_sea_nodes=航路ノードを削除;
+  draw_sea_nodes=航路ノードを描く;
   nodes_for_ai=道路・鉄道ノードを描きます。これはAI、マネージャーおよび自動建設オプションに必要です。;
+  resort=リゾート;
+  important=主要都市;
+  name_inverted=都市名の表示位置;
   d_max_level_destination=都市の旅行先が到達できる最大レベル。;
   d_max_level_destination_discover=ディスカバーモードの都市の旅行先が到達できる最大レベル。;
   d_max_path_search_steps=A*経路探索アルゴリズムが使用できる最大ステップ数。乗客、道路、鉄道および車両経路に関係します。;
@@ -1873,6 +1877,9 @@ Mods
   d_city_buildings_normal=重要都市の建設スロット数。;
   d_city_buildings_big=首都の建設スロット数。;
   d_city_buildings_lock=建設スロットを1つアンロックするのに必要なレベル。;
+  d_city_level_max_small=通常都市の最大レベル。;
+  d_city_level_max_normal=重要都市の最大レベル。;
+  d_city_level_max_big=首都の最大レベル。;
   d_shares_buy_amount=株式の数。;
   d_shares_buy_steps=完全な所有権の獲得に必要な株式を購入するまでのステップ数。;
   d_shares_min_price=株式1つあたりの最低価格。;
@@ -1887,10 +1894,11 @@ Mods
   d_vehicle_min_passengers=収益が黒字になる最低乗客数。;
   d_vehicle_spent_company=他社の車両をアンロックするために必要な金額。;
   d_vehicle_spent_category=同じカテゴリの別車両をアンロックするために必要な金額。;
-  d_vehicle_passenger_pay_per_km=キロメーターごとに乗客が支払う運賃。;
-  d_vehicle_range=航空機の最大航続距離。;
+  d_vehicle_passenger_pay_per_km=1キロごとに乗客が支払う運賃。;
+  d_vehicle_range=航空機の最大連続航続距離。;
   d_vehicle_max_wagons=列車が使用できる定義された容量の車両数。;
   d_vehicle_cost_per_wagon=輸送ごとに車両1台にかかる金額。;
+  d_ai_can_use=AIがこの車両を購入可能かどうか。;
   d_company_region=輸入が計算されない経度地域。;
   d_company_country=会社の国。;
   d_starting_loan=全ての会社が開始時に持っているローン額。;
@@ -1914,6 +1922,8 @@ Mods
   d_demand_price_decrease=減額される目的地価格の金額。;
   d_demand_price_max=目的地価格の最大値。100で割るとパーセントが出ます。;
   d_demand_price_min=目的地価格の最小値。100で割るとパーセントが出ます。;
+  d_demand_price_d_step=しきい値ごとに減少する目的地価格の上限。;
+  d_demand_price_d_start=目的地価格の上限減少に必要な都市のレベル。;
   d_hub_price_discover=ディスカバーモードでのハブ価格。;
   d_hub_level_cost_discover=ディスカバーモードでのハブアップグレード価格はレベルと乗算。;
   d_hub_maintenance_discover=ディスカバーモードでのハブ維持価格はレベルと乗算。;
@@ -1978,6 +1988,59 @@ Mods
   d_currency_order=どのように通貨を表示するか。通貨に応じて{symbol}と{amount}を正しい順番で使用してください。<>の中の!nbは、通貨のテキストが途中で改行されるのを防ぎます。;
   existing_item=既存のアイテムを選択;
   usage=MODのシステムを使って新しいコンテンツを作成したり、既存のものを編集したりできます。変更を確認するには、再ロードボタンを押してください。複数の翻訳を準備したい場合は、言語ボタンを使ってMODの言語を変更してください。;
+}
+
+Multiplayer
+{
+  quit_multiplayer=マルチプレイヤーセッションを退出しますか？;
+  multiplayer_ended=マルチプレイヤーセッションが終了しました;
+  disconnect=切断;
+  desync_detected=ゲーム状態の同期ズレを検知しました。ゲームを続行することはできますが、時間が経つにつれてズレが大きくなります。同期ズレを修復するには、セーブデータを再ロードして接続し直してください。;
+  multiplayer=マルチプレイヤー;
+  end_multiplayer=マルチプレイヤー終了;
+  start_multiplayer=マルチプレイヤー開始;
+  disconnected=サーバーから切断しました。;
+  joining=が参加中...;
+  joined=サーバーに参加しました。;
+  takes_charge=担当する会社：{company}。;
+  invite_player=プレイヤーを招待;
+  connected_count=接続済み {out_of};
+  connected=接続済み;
+  ping=ピン;
+  waiting_for_host=ホストを待機中;
+  choose_a_company=会社を選択;
+  allow_decide=プレイヤーが選択する;
+  create_new=新しい会社を作る;
+  not_signed_in=サインインしていません;
+  gog_sign_in=マルチプレイヤーで遊ぶにはGOG Galaxyにサインインしてください。;
+  connecting=接続中...;
+  downloading_mods=MODデータを同期中...;
+  downloading_save=セーブデータをダウンロード中...;
+  multiplayer_local=ローカル;
+  write_a_message=メッセージを送る;
+  send=送信;
+  load_game=現在マルチプレイヤーセッション内です。切断して自身のセーブデータをロードしますか？;
+  ready=準備完了;
+  kick=キック;
+  ban=BAN;
+  unban=BAN解除;
+  kick_everyone=全員を追放;
+  was_kicked=サーバーから{name}が追放されました。;
+  was_banned=サーバーから{name}がBANされました。;
+  was_unbanned={name}のBANを解除しました。;
+  kicked=サーバーから追放されました。;
+  banned=サーバーからBANされました。;
+  players_speed=プレイヤーゲームスピード;
+  players_speed_info=他のプレイヤーが求めるゲームスピードです。選択されている最も遅いスピードでゲームは進行します。;
+  players=プレイヤー;
+  failed_to_connect=接続失敗;
+  failed_version=ホストとゲームのバージョンが異なります。<!brk>あなたのバージョン：{version_a}。<!brk>ホストのバージョン：{version_b}。;
+  enter_password=パスワードを入力;
+  set_password=パスワードを設定;
+  connect=接続;
+  failed_to_load_mods=サーバ上のMODとクライアント上のMODが一致しません。MODの自動ダウンロードに失敗しました。ホストと同じMODがロードされていることを確認してください。;
+  enter_ip=IPv4アドレスを入力;
+  enter_ip_info=接続したいサーバーのIPv4アドレスを入力してください。;
 }
 
 MapNames
