@@ -37,6 +37,9 @@ Steam
   update=MODファイルの更新;
   update_info=SteamワークショップにMODファイルをアップロードしますか？;
   mods=MOD;
+  failed_to_create=SteamワークショップMODの作成に失敗しました;
+  failed_to_upload=SteamワークショップMODの更新に失敗しました;
+  no_icon=アップロードにはMODアイコンが必要です。;
 }
 
 IO
