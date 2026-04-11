@@ -992,6 +992,7 @@ Tasks
   company_liquidated={company}は清算されました。;
   company_merged={company}は{to}に吸収合併されました。;
   company_shares=さらに株式を購入できます。;
+  company_loan=銀行が融資上限を増額;
   company_bought_shares={company}が{from}からあなたの株を購入しました。;
   hub_bought=自社のハブが{city}で買収された;
   cities_grow=都市が成長;
@@ -1003,8 +1004,8 @@ Tasks
   first_hub_info=物流事業を始めるには、<!cl:hub:ハブ>が必要です。経営陣は、<!cl:city:都市>の中でも<!cicon_star:星>レベルの高い場所を推奨しています。;
   unlock_country=新しい国をアンロック;
   unlock_country_info=タイマーが終わる前に新しい国をアンロックしましょう。取締役会は継続的な拡大を求めています。;
-  city_timer={city}が過密状態;
-  city_timer_info={city}が待っている乗客であふれています。このままにしていると取締役会により解雇される危険があります。;
+  city_timer={city}が混雑状態;
+  city_timer_info={city}が乗車待ちの乗客で混雑しています。このままにしていると取締役会により解雇される危険があります。;
   new_hub={city}にハブを建設;
   new_hub_info=経営陣は新しいハブへの投資を勧めています。{city}には多くの目的地と成長の可能性があります。;
   new_hub_bonus={city}から助成金を交渉する余地があります。すべての目的地を接続してください。あとは経営陣が対応します。;
@@ -1068,6 +1069,17 @@ Tasks
   ach_airline=エアライン・アーキテクト;
   ach_global=グローバル・コネクター;
   ach_world=世界をステージに;
+  ach_late=やっと離陸;
+  ach_sprint=大西洋横断ダッシュ;
+  ach_phase=模写段階;
+  ach_hype=ハイプ・フライト;
+  ach_upaway=たかいたかい、とんでいけ;
+  ach_tuk=トゥクトゥク・オア・トリート;
+  ach_bust=ヤスガー農場に行かなくちゃ;
+  ach_tetris=乗客テトリス;
+  ach_debt=負債による現代化;
+  ach_king=回廊の王;
+  ach_nose=長鼻の伝説;
 }
 
 City
