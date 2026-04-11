@@ -331,7 +331,9 @@ General
   copy=コピー;
   paste=貼り付け;
   disable=無効;
+  disabled=無効化済み;
   enable=有効;
+  enabled=有効化済み;
   cancel=キャンセル;
   edit=編集;
   move_down=下へ移動;
@@ -350,6 +352,10 @@ General
   highscore=ハイスコア;
   delete=削除;
   new=新規;
+  replay=リプレイ;
+  replay_save=セーブファイルをリプレイ;
+  pause_replay=リプレイを一時停止;
+  toggle_camera_track=カメラ追跡を切り替え;
   build_total=建設済み;
   select=選択;
   assign=割り当て;
