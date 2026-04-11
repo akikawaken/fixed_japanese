@@ -2043,9 +2043,9 @@ Multiplayer
   enter_password=パスワードを入力;
   set_password=パスワードを設定;
   connect=接続;
-  failed_to_load_mods=サーバ上のMODとクライアント上のMODが一致しません。MODの自動ダウンロードに失敗しました。ホストと同じMODがロードされていることを確認してください。;
+  failed_to_load_mods=サーバー上のMODとクライアント上のMODが一致しません。MODの自動ダウンロードに失敗しました。ホストと同じMODがロードされていることを確認してください。;
   enter_ip=IPv4アドレスを入力;
-  enter_ip_info=接続したいサーバーのIPv4アドレスを入力してください。;
+  enter_ip_info=接続先サーバーのIPv4アドレスを入力してください。;
 }
 
 MapNames
