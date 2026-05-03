@@ -666,6 +666,9 @@ Entities
   vehicle_halti=ハルティ;
   vehicle_breithorn=ブライソーン;
   vehicle_grosser=グロサー;
+  vehicle_tuktuk=トゥクトゥク;
+  vehicle_nomad=ノマド;
+  vehicle_dyip=ジープニー;
   vehicle_general_t2=ジェネラルT2;
   vehicle_ironclad_1000=アイアンクラッド1000;
   vehicle_bt_2000=BT2000;
@@ -692,6 +695,9 @@ Entities
   vehicle_rapide=ラピード;
   vehicle_feitian=フェイティアン;
   vehicle_jifeng=ジーフェン;
+  vehicle_volt=ボルト-220;
+  vehicle_velox=ヴェロックス;
+  vehicle_mizu=ミズ;
   vehicle_water_taxi=ウォータータクシー;
   vehicle_little_explorer=リトルエクスプローラー;
   vehicle_petite_voyager=プティ・ヴォヤジャー;
