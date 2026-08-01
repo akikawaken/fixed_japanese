@@ -1008,7 +1008,7 @@ Tasks
   company_merged={company}は{to}に吸収合併されました。;
   company_shares=さらに株式を購入できます。;
   company_loan=銀行が融資上限を増額;
-  company_bought_shares={company}が{from}からあなたの株を購入しました。;
+  company_bought_shares={from}の株が{company}に購入されました。;
   hub_bought=自社のハブが{city}で買収された;
   cities_grow=都市が成長;
   cities_shrink=都市が衰退;
