@@ -786,7 +786,7 @@ Info
   minimum_efficiency=利益を出すために必要な乗客の最低数です。;
   estimated_profit=車両が最適な<!cl:route:ルート>で最大効率で運行した場合の<!cl:month:月間>推定利益です。;
   month=月は進捗を確認するための重要な指標になります。毎月、最大<!cl:loan:ローン>額が再計算され、<!cl:city:都市>が成長する機会があり、<!cl:event:イベント>が開始または終了します。;
-  loan=<!Cl:company:会社>は{loan}のローンからスタートします。毎月、最大ローン額は<!cl:company_value:会社価値>{amount}に初期ローンを加えた値で再計算されます。;
+  loan=<!cl:company:会社>は{loan}のローンからスタートします。毎月、最大ローン額は<!cl:company_value:会社価値>{amount}に初期ローンを加えた値で再計算されます。;
   event=イベントはあらかじめ設定されており、特定の国の<!cl:tourism:観光>を増加させます。適切に活用すれば、利益を向上させられます。;
   city=都市には<!cl:destination:目的地>を持つ<!cl:passengers:乗客>がいます。すべての目的地の需要が満たされると、都市は成長して、すべての目的地の乗客発生量が増加し、新たな目的地が追加されます。;
   destination=目的地は<!cl:passengers:乗客>を生み出し、<!cl:vehicles:車両>を使って輸送できます。さらに、<!cl:tourism:観光客>は乗客の発生量を増加させる可能性があります。;
