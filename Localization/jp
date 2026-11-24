@@ -7,6 +7,21 @@ Order
 {
   date={year}年{month}月{day}日;
   date_n={0}-{1}-{2};
+  thousands_separator=,;
+  decimal_separator=.;
+  value_times=x{amount};
+  length_unit={amount} {unit};
+  value_unit={amount}/{unit};
+  value_max={amount}/{max};
+  value_positive=+{amount};
+  value_negative=-{amount};
+  value_percent={amount}%;
+  build_single={build} - {name};
+  build_blueprint={name} x{amount};
+  build_amount={build} - {name} x{amount};
+  build_amount_max={build} {name} {amount}/{max};
+  size={width}x{length};
+  currency={amount} {code};
 }
 
 Currency
@@ -53,7 +68,9 @@ IO
   folder_name=フォルダ名;
   folder_new=フォルダを作成する;
   error_saving=セーブできませんでした;
-  error_saving_info=ファイル「{file}」をセーブできませんでした。<!brk>セーブするための十分な空き容量があるか、ご確認ください。;
+  error_saving_info=ファイル「{file}」をセーブできませんでした。<!brk>セーブするための十分な空き容量があるか確認してください。;
+  error_loading=ロードできませんでした;
+  error_loading_info=ファイル「{file}」は破損しているため、ロードできませんでした。<!brk>代わりに以前の自動セーブのロードを試みてください。;
 }
 
 MainMenu
@@ -105,6 +122,11 @@ MainMenu
   autosave=自動セーブ;
   quicksave=クイックセーブ;
   crashsave=クラッシュセーブ;
+  graphics_lowered_title=グラフィック品質を下げました;
+  graphics_lowered=前回のプレイ中にグラフィックドライバーが応答しなくなったため、ワールドクオリティ、車両のクオリティ、アンチエイリアスの品質を自動的に1段階下げました。;
+  missing_files=一部のゲームファイルが見つからないか破損しているため、ゲームを終了しました。;
+  missing_files_help=一部のプログラムが見つかりません。ゲームを再インストールしてください。;
+  file_in_use={file} は別のプログラムで開かれています。閉じてからもう一度お試しください。;
   load=ロード;
   save=セーブ;
   override=上書き;
@@ -154,6 +176,13 @@ MainMenu
   mouse_movement_info=マウスでどのようにカメラを動かすか設定します。;
   mouse_sensitivity=マウス感度;
   mouse_sensitivity_info=マウスカメラ移動の感度を設定します。;
+  controller_prompts=ボタン表示;
+  controller_prompts_info=ゲーム内で表示するコントローラーのボタンを選びます。自動では使用中のコントローラーに合わせます。;
+  controller_prompts_auto=自動;
+  controller_vibration=振動;
+  controller_cursor=コントローラーのカーソル速度;
+  controller_cursor_info=右スティックでカーソルを動かす速さを設定します。;
+  controller_invert_zoom=スティックのズームを反転;
   zoom_to_mouse=カーソルにズーム;
   zoom_to_mouse_info=マウスホイールでのズームを、カーソルに対して行うか、画面中央に対して行うかを切り替えます。;
   edge_scroll=画面端スクロール;
@@ -169,6 +198,8 @@ MainMenu
   always_day=常に昼;
   always_night=常に夜;
   chromatic_aberration=色収差;
+  anti_aliasing=アンチエイリアス;
+  anti_aliasing_info=ギザギザした縁を滑らかにします。この設定はパフォーマンスに大きな影響を与えます。ゲームが重い場合などにはこの設定を下げてください。;
   world_quality=ワールドクオリティ;
   world_resolution=ワールド解像度;
   road_rail_quality=道路/線路のクオリティ;
@@ -238,6 +269,11 @@ MainMenu
   achievements_reset=実績をリセットしますか？;
   achievements_reset_info=すべての実績情報が削除されます。実行後、削除した内容を元に戻すことはできません。;
   need_help=ヘルプが必要な方は、公式Discordサーバーにご参加ください！;
+  wiki=wiki;
+  vehicles_quality_lowered=この品質に対して使用するためのVRAMが足りませんでした。自動的に品質を1段階低下させました。;
+  device_lost=グラフィックドライバが応答なしになったため、ゲームを終了しています...;
+  device_lost_saved=セーブしました。メインメニューのコンティニューを選ぶことでこのセーブを再開できます。;
+  device_lost_help=次回起動時、グラフィック品質は1段階低下します。;
 }
 
 Hotkeys
@@ -246,6 +282,7 @@ Hotkeys
   reserved_key={key}は予約済みです;
   override_key=キーを上書きしますか？;
   press_any_key=任意のキーを押す;
+  press_any_button=任意のボタンを押す;
   Navigation_Left=左へ移動;
   Navigation_Right=右へ移動;
   Navigation_Up=上へ移動;
@@ -579,6 +616,16 @@ Stats
   gw=gw;
   tw=tw;
   score=スコア;
+  km/h=km/h;
+  mph=mph;
+  km=km;
+  m=m;
+  miles=mi;
+  t=t;
+  kg=kg;
+  watt=W;
+  k_thousand=K;
+  m_million=M;
 }
 
 Electric
@@ -612,6 +659,20 @@ Input
   key_right=右矢印;
   key_numpad=テンキー {key};
   key_escape=Esc;
+  key_shift=Shift;
+  key_ctrl=Ctrl;
+  key_alt=Alt;
+  key_enter=Enter;
+  key_caps=Caps Lock;
+  key_insert=Insert;
+  key_delete=Delete;
+  key_page_up=Page Up;
+  key_page_down=Page Down;
+  key_end=End;
+  key_space=Spacebar;
+  key_pause=Pause;
+  key_tab=Tab;
+  key_back=Backspace;
 }
 
 Entities
@@ -760,7 +821,7 @@ Info
 {
   ach_done=世界のレジェンド！;
   game_start={company}は{loan}の小口融資を受けて世界市場に参入しました。このささやかなスタートを、世界をまたぐ物流帝国へと育て上げましょう。あなたの野望を証明してください！;
-  game_start_sandbox=こういったグラフィックのボタン{graphics}は、普段よりも多くをコントロールできます。実績は無効です。;
+  game_start_sandbox=右下のヘルメット{cheats}をクリックまたは{hotkey}キーでチートを有効にします。全ての購入は無料で、ボタン{graphics}を使用して普段よりも多くをコントロールでき、ヘルメットの隣のクリップボード{options}にはお金・時間・ワールドのチートがあります。実績は解除することができません。;
   game_start_discover=都市が乗客によって混雑しすぎないようにしましょう。混雑が酷すぎると、取締役会によって即座に解雇されてしまいます。;
   building_hotel=ホテルは<!cl:city:都市>で待つ乗客の<!cl:indirect_capacity:乗り換え待ち上限>を増やします。また、ホテルがあることで会社の<!cl:trust:信頼度>が上昇します。;
   building_fuel_depot=燃料貯蔵庫があると、この<!cl:city:都市>から出発する<!cl:vehicles:車両>の運行費を減らします。;
@@ -786,7 +847,7 @@ Info
   minimum_efficiency=利益を出すために必要な乗客の最低数です。;
   estimated_profit=車両が最適な<!cl:route:ルート>で最大効率で運行した場合の<!cl:month:月間>推定利益です。;
   month=月は進捗を確認するための重要な指標になります。毎月、最大<!cl:loan:ローン>額が再計算され、<!cl:city:都市>が成長する機会があり、<!cl:event:イベント>が開始または終了します。;
-  loan=<!cl:company:会社>は{loan}のローンからスタートします。毎月、最大ローン額は<!cl:company_value:会社価値>{amount}に初期ローンを加えた値で再計算されます。;
+  loan=<!Cl:company:会社>は{loan}のローンからスタートします。毎月、最大ローン額は<!cl:company_value:会社価値>{amount}に初期ローンを加えた値で再計算されます。最大ローン額は{max}を超えることはありません。;
   event=イベントはあらかじめ設定されており、特定の国の<!cl:tourism:観光>を増加させます。適切に活用すれば、利益を向上させられます。;
   city=都市には<!cl:destination:目的地>を持つ<!cl:passengers:乗客>がいます。すべての目的地の需要が満たされると、都市は成長して、すべての目的地の乗客発生量が増加し、新たな目的地が追加されます。;
   destination=目的地は<!cl:passengers:乗客>を生み出し、<!cl:vehicles:車両>を使って輸送できます。さらに、<!cl:tourism:観光客>は乗客の発生量を増加させる可能性があります。;
@@ -799,15 +860,26 @@ Info
   demand_price=乗客がチケットに支払う価格は、目的地の充足度によって変動します。目的地の充足度が{min}未満の場合、需要価格は{decrease}低下します。一方で、充足度が{max}以上であれば、需要価格は{increase}上昇します。;
   demand_price_cap=都市が{levels}回レベルアップするたびに、需要価格上限は{step}減少します。;
   indirect_capacity=乗り換え待ち上限は、都市が保持できる乗り換え<!cl:passengers:乗客>の最大数を示し、これに達すると乗客は乗り換え<!cl:route:ルート>としてこの都市を避けるようになります。;
+  indirect_too_slow=乗客はすでにより速い経路を利用しており、それより{percent}以上長い経路は避けます。乗客が待たされている間、この上限は緩くなっていきます。;
+  connection_full=この区間の乗車を希望する乗客の数は当該区間の便数（{amount}便）で処理できる数を上回っています。そのため、今後この区間の利用を希望する乗客はこの区間を避けるよう迂回します。この区間を増便するか、より乗車定員の大きい車両を導入するとこの区間の迂回を停止します。;
+  next_stop_seats=各区間を待つ乗客と、その区間が受け入れ可能な人数です。満員の区間には、乗り物が追いつくまで新しい乗り換え客が来ません。;
+  indirect_too_long=乗客は、目的地までの直線距離×{times}を超える経路を選びません。;
+  indirect_too_many_changes=乗客が目的地までに乗車できる路線の数は{amount}路線までですが、現在は最短経路でも{legs}路線に乗車しなければなりません。;
+  indirect_not_connected=この都市間に有効な経路がありません。;
+  capacity_half=乗り換え待ち上限の半分以上が使われています。乗客は可能な限りこの都市での乗り換えを避けるようになっています。;
+  boarding_order=車両はまず乗り換え乗客を乗せ、次に帰路の乗客、最後に新しい地元の乗客を乗せます。;
   infrastructure=<!cl:city:都市>インフラは会社経営の側面を強化したい際によい投資先となります。都市で建物を購入するには<!cl:hub:ハブ>が必要です。;
   company=会社は、輸送や投資を通じて利益を生み出す事業体です。会社は合併や買収によって子会社として経営されることがあります。;
   company_value=会社価値は、<!cl:inflation:インフレ>や<!cl:subsidies:補助金>を考慮しない<!cl:company:会社>の現在の資産価値の推定額です。;
+  rival=ライバルは競合の中でも最も強いAI会社です。ライバルはトップ企業に合わせて成長し、あなたや他社の株を買うこともあります。AI会社は<!cl:month:毎月><!cl:company_value:会社価値>で順位付けされます。数か月上位から外れたライバルは<!cl:target:ターゲット>になります。;
+  target=ターゲットは競合のAI会社です。成長が遅く株を買わないため、買収に向いています。8株すべてを保有すると、吸収合併、子会社化、清算を選べます。数か月間会社価値の上位に入り続けたターゲットは<!cl:rival:ライバル>になります。;
+  player=この会社は別のプレイヤーが運営しています。ライバルと同じく、プレイヤーはあなたや他社の株を買うことが可能です。;
   journey_time=<!cl:vehicles:車両>がすべての<!cl:destination:目的地>を訪れ、始発点に戻るまでにかかる<!cl:time:時間>です。;
   time=時間は高レベルでシミュレートされ、24時間が1ヶ月に相当します。一部の情報は理解しやすいように時間単位で表示されますが、シミュレーションでは月単位に変換されます。12時間は半月に相当します。;
   route=ルートは、複数の<!cl:city:都市>を接続し、<!cl:vehicles:車両>を使って<!cl:passengers:乗客>を輸送します。;
   route_cyclic=循環ルートは、最後の目的地に到達した後、最初の目的地に戻ります（1-2-3-1-2-3）。非循環ルートは、最後の目的地に到達した後、逆順で全ての目的地を巡ります（1-2-3-2-1）。;
-  roads=<!cl:road_vehicles:道路車両>は、<!cl:city:都市>間を移動するために道路が必要です。道路は一度建設すればルートや会社を問わず共有することができます。;
-  railroads=<!cl:trains:列車>は、<!cl:city:都市>間を移動するために鉄道が必要です。鉄道は一度建設すればルートや会社を問わず共有することができます。;
+  roads=<!cl:road_vehicles:道路車両>は、<!cl:city:都市>間を移動するために道路が必要です。一度建設した道路はルートや会社を問わず共有されます。;
+  railroads=<!cl:trains:列車>は、<!cl:city:都市>間を移動するために鉄道が必要です。一度建設した道路はルートや会社を問わず共有されます。;
   passengers=乗客は、<!cl:destination:目的地>へ移動したいシミュレートされた人々です。乗客は最大{amount}台の車両に乗り継ぎ可能で、目的地までの直線距離×{times}を超えるルートや、最短経路の{best}を超えるルートは選びません。;
   hub=ハブは、<!cl:vehicles:車両>の保管、管理、および地域の物流業務の中心となる施設です。;
   buy_hub=ハブを購入するには、<!cl:city:都市>を選択してください。;
@@ -841,7 +913,8 @@ Info
   no_travelers=選択された<!cl:city:都市>間に<!cl:passengers:乗客>がいません。本当にこの<!cl:route:ルート>を作成しますか？;
   traffic=交通情報は選択した都市の乗客の出発地と行先が表示されます。;
   analytics=テレメトリ機能により、Memel Games は Worldwide Rush を改善しています。バランス調整やバグ修正のために、カウンターやクラッシュログなど、個人を特定できないデータを収集します。<!brk><!brk>カウンター情報：<!brk>- 購入済みの車両<!brk>- ハブの場所とアップグレード<!brk>- ゲームセッションの長さとエラー<!brk><!brk><!brk>クラッシュデータには以下が含まれます：<!brk>- ゲームコードのトレース<!brk>- ゲーム設定<!brk>- 可能であれば現在のゲーム構成<!brk><!brk><!brk>テレメトリ機能は設定でいつでもオン／オフを切り替えることができます。;
-  company_shares=会社株式はその会社の所有権の基本単位を表します。株式は毎月の収益に基づいて配当が行われます。会社の株式を50%以上所有すれば配当割合を変更することができます。;
+  company_shares=会社株式はその会社の所有権の基本単位を表します。会社は毎<!cl:month:月>、前月の<!cl:operating_profit:営業利益>の{dividends}を、株式を保有する会社に配当として支払います。すべての株式を所有すると会社を買収できます。;
+  market_premium=買い手が大きいほど、他社の株式は高くなります。価格は表示された倍率で掛けられ、この倍率は前月の全会社の価値に占める買い手の割合とともに増えます。;
   bought_shares=現在、他社が保有している株は購入できません。この会社の全ての株が購入されている場合にのみ、他社が保有する株を購入できるようになります。;
   company_owned=全ての株式は、一社が保有しています。;
   locked_shares=一部の株式は2ヶ月毎にロックされたりロックが解除されたりします。会社は自社の株式であれば先に購入できます。購入しなければ、株式は市場に公開され誰でも取引できるようになります。;
@@ -850,6 +923,7 @@ Info
   sustain_company=CEOはこれ以上拡大せず会社の維持に務めます。;
   company_merge=自社に吸収する会社資産を選択してください。;
   company_liquidate=すべての会社資産とインフラを売却します。;
+  keep_company=会社はAIの経営のまま残り、毎月営業利益の{dividends}をあなたに支払います。この会社が成長することを許可するか、現状を維持させるかは指定することができます。;
   gamemode_classic=1人で遊ぶことも、他のプレイヤーと競い合いながら物流企業を築くこともできます。;
   gamemode_discover=都市や国をアンロックしながら世界を探索しましょう。;
   gamemode_sandbox=制限なしでプレイ可能。会社を設立してすべてをコントロールしましょう。;
@@ -886,6 +960,11 @@ Info
   company_clasification=会社のクラスは、経営規模を示します。;
   grants=<!cl:tasks:タスク>の完了に対して、政府から助成金が支給されます。;
   tasks=<!cl:month:毎月>、政府または会社の経営陣からタスクが発行されます。これらは成長を助けるためのものであり、その完了は任意です。;
+  operating_profit=このハブに所属する車両やハブによる利益から、運営費や税金などのランニングコストを差し引いた収益です。;
+  revenue=<!cl:vehicles:車両>の収入、他社があなたのハブに支払う利用料、管理中のハブが費用を差し引いて稼いだ金額です。;
+  running_costs=現在の路線網の運営にかかる費用です。車両の運行費と整備費、ハブ維持費、管理税、汚染税が含まれます。収益から運営費を差し引くことで<!cl:operating_profit:営業利益>を算出できます。;
+  dividends_flow=他社の株式から受け取る配当と、他社があなたの会社から受け取る配当です。;
+  investments=成長のために使った、または資産の売却で得たお金です。車両、ハブ、インフラ、株式、ハブマネージャーとの送金、ローン利息、助成金が含まれます。<!cl:operating_profit:営業利益>には含まれません。;
   expense_pollution=あなたの会社の<!cl:vehicles:車両>は汚染を引き起こします。尊敬される企業として、排出量が多いほど支払う税金も多くなります。この税金はホッキョクグマやペンギンを守るために使われます。;
   set_seed=シードはゲームセッションをランダム化するために使用されます。;
   set_vehicle_types=選択した車両タイプのみでプレイを制限します。船舶のみの場合、港のない都市は消滅します。;
@@ -895,6 +974,7 @@ Info
   set_passenger_amount=都市で生成される乗客数を設定できます。数を減らすと、より多くの都市にハブを広げることが必要になります。;
   set_competition_amount=出現させるAI競合相手の数を設定できます。;
   set_competition_difficulty=AI競合相手の賢さを設定できます。;
+  past_rivals=これまでのセーブデータにおけるあなたの会社の名前を使用した会社がAI会社として登場することがあります。1ゲームに最大2社まで出現し、マルチプレイでは登場しません。;
   country_buffs=デフォルトで特定の国にはプレイの仕方を変えるバフがついています。ランダム化するとどの国にどのバフがつくのかが変化します。すべてにバフはすべての国にランダムなバフがつきます。;
   random_start=ランダムで最適な都市にあるハブが手に入ります。;
   lose_condition=時間切れになるとゲームオーバーになるかどうかを設定します。;
@@ -1130,6 +1210,17 @@ City
   connecting=接続中;
   returning=復路;
   indirect_capacity=乗り換え待ち上限;
+  indirect_exists_partly=乗り換えで使用する路線の一部が他社の路線です;
+  indirect_too_slow=乗り換え経路が遅すぎます;
+  connection_full=経路の区間が満員です;
+  indirect_too_long=どの経路も遠回りすぎます;
+  indirect_too_many_changes=乗り換え回数が多すぎます;
+  over_limit=上限超過;
+  fastest_path=最速経路;
+  next_stop=次の停車地;
+  capacity_open=乗り換え乗客を受け入れ中;
+  capacity_half=半分以上埋まっています;
+  capacity_full=満員;
   tourism=観光;
   marketing=マーケティング;
   hotel=ホテル;
@@ -1177,6 +1268,15 @@ Vehicle
   travel_destinations=旅行先;
   tier=ランク;
   waiting_to_leave=出発待ち;
+  holding_for_spacing=間隔調整のため待機中;
+  departs_every=発車間隔;
+  spacing=車両の等間隔運行;
+  spacing_info=各車両は始点及び終点と循環路線の中間で運行間隔が均一になるように調整を行います。;
+  spacing_deviation=偏差;
+  spacing_even=等間隔;
+  spacing_fixed={time}ごと;
+  spacing_off=オフ;
+  spacing_choose=クリックして、このルートの車両の間隔を選択します：等間隔、一定間隔、間隔調整なし;
   no_road=出発できる道路がありません;
   no_rails=出発できる鉄道がありません;
   performance=パフォーマンス;
@@ -1191,6 +1291,7 @@ Vehicle
   editing_line={route}を編集中;
   traveling=移動中;
   trasferring_passengers=乗客を移送中;
+  transfers_on_board=車内の乗り換え乗客;
   going_home=回送中;
   capacity_per_wagon=車両ごとの定員;
   max_wagons=最大車両数;
@@ -1205,6 +1306,25 @@ Vehicle
   region_america=アメリカ;
   region_eu=ヨーロッパおよびアフリカ;
   region_asia=アジアあよびオセアニア;
+  leave_condition=発車条件;
+  leave_after_loading=積み込み後;
+  leave_full_load=満載;
+  leave_info=満載：車両はこの停留所で満員になるまで待ちます。待つのは最長で1周分です。このルートの車両はここで1台ずつ積み込み、等間隔運行はオフになります。停車時間を超えた待機には1時間ごとに費用がかかります。;
+  leave_after_info=積み込み後：停車時間が終わると、満員でなくても出発し、ルートの間隔は保たれます。;
+  leave_max_wait=最長待機時間;
+  leave_wait_cost=1時間あたりの待機費用;
+  waiting_for_load=満載待ち;
+  queued_to_load=積み込み待ち（前に{count}台）;
+  spacing_by_load=積み込みで調整;
+  spacing_by_load_info=車両は{cities}で満載を待ちます。そこで1台ずつ積み込むため間隔が空き、等間隔運行はオフになります。;
+  lock_vehicle=車両をロック;
+  unlock_vehicle=車両のロックを解除;
+  lock_all=全車両をロック;
+  unlock_all=全車両のロックを解除;
+  lock_selected=選択した車両をロック;
+  unlock_selected=選択した車両のロックを解除;
+  locked_vehicles=ロック中の車両;
+  lock_info=ハブマネージャーは、ロックされた車両を売却・交換・ダウングレード・アップグレードしません。自分でアップグレードしてもロックは維持され、完全にロックされたルートに追加する車両も最初からロックされます。;
 }
 
 Infrastructure
@@ -1242,6 +1362,24 @@ Infrastructure
   road_mode_free_info={key}を押しながらドラッグして道路ノードを描けます。;
   road_mode_remove=削除モード;
   road_mode_remove_info={key}を押し続けて道路ノードと接続を削除します。;
+  road_undo=元に戻す;
+  road_undo_info=ノードへの最後の変更を元に戻します。ショートカット：{key};
+  remove_junctions=他の道路が使用している分岐点は残ります。;
+  remove_rival={company}が所有しています。所有者のみが削除できます。;
+  road_straight=直線;
+  road_terrain=地形に沿う;
+  road_straight_info=地形に沿わず、接続を直線で引きます。下で両方の価格を比較できます。;
+  road_cheaper=より安いルートを探す;
+  road_cheaper_info=トンネルや橋を避ける経路の方が安上がりになる場合、接続経路を変更します。元に戻すこともできます。;
+  road_cheaper_none=安いルートなし;
+  road_cheaper_status=確認待ちの接続：{count}。確認済みの接続は、変更するまでスキップされます。;
+  cost_land=平地;
+  cost_hills=丘陵;
+  cost_mountains=山岳;
+  cost_bridges=橋;
+  cost_discount=割引;
+  cost_short_by={amount}不足;
+  cost_existing=建設済み;
   roads=道路;
   traffic=交通;
   traffic_toggle=乗客／交通の切り替え;
@@ -1266,6 +1404,53 @@ Infrastructure
   create_a_route=ルートを作成する;
   reverse_route=ルートを反転する;
   unlock_country={country}をアンロックしますか？;
+  route_loop=循環;
+  route_stops=停留所;
+  route_stops_info=停留所をドラッグして並べ替え、各停留所の発車条件を設定し、名前で都市を追加できます。;
+  route_towns=途中の町;
+  route_towns_info=停留所間の道路や線路が通る町を順番に追加します。;
+  route_build_all=不足分をすべて建設;
+  route_build_all_info=停留所の間にまだない道路や鉄道を建設し、道路車両や列車がルート全体を走れるようにします。;
+  route_build_all_not_needed=航空機と船舶には道路も鉄道も必要ありません。;
+  route_build_all_done=すべての区間が建設済みです。;
+  route_need_vehicle=車両を選んでください;
+  route_need_stops=停留所を2つ以上追加してください;
+  route_no_hub=これらの都市にはハブを置けません;
+  route_unchanged=変更なし;
+  route_leg_no_road=道路なし;
+  route_leg_no_rails=線路なし;
+  route_leg_no_sea=航路なし;
+  route_leg_too_far=この飛行機には遠すぎます;
+  route_covers=需要の{percent}をカバー;
+  route_unserved=未対応の需要;
+  route_unserved_info=月間輸送余力です。停留所間の移動と、停留所を通る路線の都市からそこで乗り換える移動を含みます。移動ごとに後で帰宅する人が出るため、2回数えます。;
+  route_waiting_now=現在の待ち客;
+  route_waiting_now_info=停留所で今、別の停留所へ向かおうとしている乗客です。乗り換え客と帰宅客も含みます。;
+  route_transfers=乗り換え客;
+  route_transfers_info=長い旅の途中、または帰宅途中の待ち客です。別のルートで到着し、このルートで先へ進みます。;
+  route_waiting={count}人待ち;
+  route_vehicle_carries=1台の輸送量;
+  route_vehicle_carries_info=そのうち1台が月に運ぶ乗客数です。座席数、戻ってくる頻度、乗る順番（乗り換え客、帰宅客、新しい移動の順）で決まります。;
+  route_vehicles_needed=全需要に対する必要輸送力;
+  route_vehicles_needed_info=均等に配置して、全ての乗客を運ぶのに必要な車両数です。;
+  route_covered={times}でのカバー率;
+  route_covered_info=まだ誰も運んでいない需要のうち、このルートの車両が運ぶ割合です。;
+  route_stock_short=この車両の在庫は残り{count}台です;
+  route_out_of_stock=在庫切れ;
+  route_stock_left=残り{count}台;
+  route_most_carried=最大輸送量;
+  route_most_carried_info=車両を単に増やしても輸送効果には限界があります。停留所で待てる乗客数には上限があり、車両も一台ずつ出発します。;
+  route_joins_line={line}に追加;
+  route_per_month={count}/月;
+  route_hover_add={key} 停留所{number}として追加;
+  route_hover_insert={key} 停留所{number}として挿入;
+  route_full_load_note={count}か所の停留所で満載を待ちます：車両は最長1周分待ち、1台ずつ積み込み、等間隔運行はオフになります。待機には1時間あたり{cost}かかります。;
+  route_full_load_many=停留所の半分以上が待機するため、1周に大幅に時間がかかることがあります。;
+  route_count_info=作成で購入する車両の数です。新しい車両はルート上に間隔を空けて配置されます。;
+  route_hub_auto=自動;
+  route_hub_info=車両を配置するハブです。自動ではルート上で最も安いあなたのハブを選び、編集した車両は元のハブが停留所である限りそのままにします。停留所のハブを押すと選択し、もう一度押すと自動に戻ります。;
+  route_hub_places=空き {free}/{max};
+  route_hub_new=新しいハブ;
 }
 
 Company
@@ -1288,6 +1473,43 @@ Company
   operating_profit=営業利益;
   company_shares=会社株式;
   dividends=配当;
+  market_premium=市場リーダー割増;
+  rival=ライバル;
+  target=ターゲット;
+  rivals=ライバル;
+  targets=ターゲット;
+  player=プレイヤー;
+  mine=自分の;
+  cheats_money=お金;
+  cheats_world=ワールド;
+  clear_loan=ローンを消す;
+  skip_month=1ヶ月スキップ;
+  skip_year=1年スキップ;
+  skip_stop=スキップを止める（残り{months}ヶ月）;
+  hyper_speed=超高速：{state};
+  buy_all_roads=全道路と線路を購入;
+  pause_ai=全AIを一時停止;
+  resume_ai=全AIを再開;
+  cheat_menu=チート;
+  city_level_up=レベルアップ;
+  city_level_down=レベルダウン;
+  fill_destinations=全目的地を満員にする;
+  full_trust=信頼をすべて獲得;
+  new_company_here=ここに新会社;
+  any_vehicles=全車両;
+  make_rival=ライバルにする;
+  make_target=ターゲットにする;
+  company_rank={count}社中{rank}位;
+  all_shares_yours=全株式を保有;
+  shares_yours=保有;
+  buy_back=買い戻す;
+  keep_company=会社を維持;
+  company_branding=会社のブランド;
+  share_pays=1株あたり月{amount};
+  pays_you=毎月{amount}を受け取れます;
+  others_take=他社が毎月{amount}を受け取ります;
+  own_all_cost=全株式の取得費用;
+  amount_month=月{amount};
   dividends_payout=配当金支払い;
   buy_shares=株式購入;
   sell_shares=株式売却;
@@ -1302,6 +1524,8 @@ Company
   manage_company=会社経営;
   competition_amount=競合数;
   competition_difficulty=競合の難易度;
+  past_rivals=過去のゲームのライバル;
+  establishing=設立準備中（{country}）;
   randomize_name=会社名をランダム化する;
   randomize=ランダム化;
   bankrupt=倒産;
@@ -1342,10 +1566,26 @@ Company
   expense_ships_servicing=港湾税;
   income_hubs=ハブの収益;
   expense_hubs=ハブの支出;
+  income_hub_fees=他社からのハブ利用料収益;
+  expense_hub_running=ハブ維持費と管理税;
+  manager_transfers=ハブマネージャーへの送金;
+  managed_hubs=管理中のハブ;
+  finances=財務;
+  revenue=収益;
+  running_costs=運営費;
+  investments=投資;
+  dividends_received=受取配当;
+  dividends_paid=支払配当;
+  period_month=月;
+  period_year=年;
+  period_before=前期: {amount};
+  profit_change=前期比;
   expense_infrastructure=インフラの支出;
   expense_loan=ローン利息;
   expense_pollution=段階的汚染税;
   current_tax=現在の税率;
+  management_tax=管理税;
+  hub_management=ハブ管理;
   income_bracket=収入階層;
   expense_operating=運行費;
   starting_loan=初期ローン;
@@ -1701,40 +1941,42 @@ World
   guadeloupe=グアドループ;
   martinique=マルティニーク;
   gotland=ゴットランド島;
+  sea=海;
+  release=2025年8月20日リリース;
 }
 
 CompanyNameGen
 {
-  road_01={country}エクスプレス;
-  road_02={country}バス;
-  road_03={country}道路網;
-  road_04={country}観光バス;
-  road_05={country}自動車;
-  road_06={country}交通;
-  train_01={country}高速鉄道;
-  train_02={country}鉄道;
-  train_03={country}急行;
-  train_04={country}電鉄;
-  train_05={country}鐵道;
-  train_06={country}軌道;
-  plane_01={country}スカイ;
-  plane_02={country}エア;
-  plane_03={country}航空;
-  plane_04={country}空輸;
-  plane_05={country}エアライン;
-  plane_06={country}エアウェイズ;
-  ship_01={country}航海;
-  ship_02={country}クルーズ;
-  ship_03={country}航行;
-  ship_04={country}海運;
-  ship_05={country}フェリー;
-  ship_06={country}ライン;
-  fleet_01={country}ホールディングス;
-  fleet_02={country}グローバル;
-  fleet_03={country}輸送;
-  fleet_04={country}運輸;
-  fleet_05={country}ソリューションズ;
-  fleet_06={country}グループ;
+  road_01={place}エクスプレス;
+  road_02={place}バス;
+  road_03={place}道路網;
+  road_04={place}観光バス;
+  road_05={place}自動車;
+  road_06={place}交通;
+  train_01={place}高速鉄道;
+  train_02={place}鉄道;
+  train_03={place}急行;
+  train_04={place}電鉄;
+  train_05={place}鐵道;
+  train_06={place}軌道;
+  plane_01={place}スカイ;
+  plane_02={place}エア;
+  plane_03={place}航空;
+  plane_04={place}空輸;
+  plane_05={place}エアライン;
+  plane_06={place}エアウェイズ;
+  ship_01={place}航海;
+  ship_02={place}クルーズ;
+  ship_03={place}航行;
+  ship_04={place}海運;
+  ship_05={place}フェリー;
+  ship_06={place}ライン;
+  fleet_01={place}ホールディングス;
+  fleet_02={place}グローバル;
+  fleet_03={place}輸送;
+  fleet_04={place}運輸;
+  fleet_05={place}ソリューションズ;
+  fleet_06={place}グループ;
 }
 
 CompanyNameGenInput
@@ -1764,6 +2006,10 @@ CompanyNameGenInput
   name_23=アジア;
   name_24=ラテン;
   name_25=太平洋;
+  name_26=ヨーロッパ;
+  name_27=アフリカ;
+  name_28=アンデス;
+  name_29=ヒマラヤ;
 }
 
 Tutorial
@@ -1788,10 +2034,27 @@ Tutorial
   time_info_2=また、通常速度にしたい場合は{play}、高速にしたい場合は{fast}、最高速にしたい場合は{fastest}です。;
   time_info_3=<!cl:hub:ハブ>と<!cl:vehicles:車両>を何台か購入できたら一時停止を解除しましょう。そうしなければ競合他社がこちらよりも早く最高のハブと<!cl:route:ルート>を確保してしまうかもしれません。;
   indirect=乗り換え混雑;
-  indirect_info_1=乗り換え混雑とは、乗客が<!cl:city:都市>を<!cl:destination:目的地>までの乗り換え場所としていることを指します。<!cl:passengers:乗客>は直通経路があっても、すべての乗客を輸送する容量がない場合に乗り換え経路を選ぶことがあります。;
+  indirect_info_1=乗り換え混雑とは、乗客が<!cl:city:都市>を<!cl:destination:目的地>までの乗り換え場所としていることを指します。<!cl:passengers:乗客>は有効な経路を持つ最初の車両に乗るため、直通経路がない場合だけでなく、乗り換え経路が直通経路とあまり変わらない長さの場合にも乗り換えます。;
   indirect_info_2=都市には<!cl:indirect_capacity:乗り換え待ち上限>があり、これが上限に達すると、この都市を乗り換え場所として使わなくなります。;
   indirect_info_3=<!cl:indirect_capacity:乗り換え待ち上限>は<!cl:city:都市>のレベルが上がることで増える他、<!cl:e.building_hotel:ホテル>で更に増やすこともできます。;
   indirect_info_4=都市が<!cl:passengers:乗客>を受け入れられない問題が発生した場合は、乗客がどこに行けていないのかを確かめましょう。必要な目的地に向かう<!cl:vehicles:車両>を増やすことも重要です。大抵の場合、1つの<!cl:route:ルート>がただ混雑してるだけなら、利益を生む乗客が更にいるということを意味しています。;
+  indirect_boarding=車両はまず乗り換え客を乗せ、次に帰路の乗客、最後にこの都市からの乗客を乗せます。混雑した乗り換え都市では、車両が停車していても地元の乗客が待たされることがあります。;
+  indirect_limits=乗客が1回の移動で乗る車両は最大{amount}台で、大きな遠回りや最速経路よりはるかに遅い経路は避けます。目的地にカーソルを合わせると、乗客が使う経路、各区間を運行する会社、経路が使われない理由を確認できます。;
+  indirect_capacity=乗り換え都市;
+  indirect_capacity_half=都市の混雑度が50%を超えると、旅行者はほかの乗換都市を選び始めます。満員になると、空きができるまで新たな旅行者はその都市で乗り換えなくなります。;
+  indirect_capacity_seats=都市から出る各区間にも、それぞれ輸送上限があります。その区間の車両が近いうちに運べる人数を超える旅行者が待っていると、新たな旅行者は別の経路を選びます。満員の区間は座席数を増やすと、再び利用されるようになります。;
+  indirect_slow=より速い経路;
+  indirect_slow_1=旅行者は、すでに利用している最速経路を基準に、ほかの経路と所要時間を比較します。最速経路より所要時間が{percent}以上長い経路は、空席があっても選ばれません。;
+  indirect_slow_2=より遠回りの少ない<!cl:route:ルート>を建設して対抗しましょう。最速経路だけでは全員を運べない場合、旅行者が待つにつれて許容される所要時間の差が広がり、遅い経路も利用されるようになります。;
+  indirect_detour=大きな遠回り;
+  indirect_detour_1=旅行者は、目的地までの直線距離の{times}倍を超える経路を利用しません。ジグザグに進む路線や、最初に目的地と反対方向へ向かう路線は、その分だけ経路が長くなります。;
+  indirect_detour_2=直線に近い<!cl:city:都市>を経由して都市を結ぶか、直通の<!cl:route:ルート>を追加しましょう。;
+  indirect_changes=乗り換えが多すぎる;
+  indirect_changes_1=乗客が1回の移動で乗る車両は最大{amount}台です。乗り換え場所が1つ増えるごとに、乗る車両も1台増えます。;
+  indirect_changes_2=長い区間を走る路線を使えば乗り換えは減ります。多くの路線が集まる大きなハブがあれば、移動は短く済みます。;
+  indirect_unconnected=つながりの不足;
+  indirect_unconnected_1=旅行者が<!cl:destination:目的地>にたどり着くには、路線がつながっている必要があります<!cl:city:都市>が乗換地点として機能するには、少なくとも2台の<!cl:vehicles:車両>が停車していなければなりません。;
+  indirect_unconnected_2=都市同士を結ぶ<!cl:route:ルート>を追加するか、乗換地点にしたい都市に2台目の車両を停車させましょう。;
   vehicle_info_1=さまざまな<!cl:vehicles:車両>にはそれぞれ得意分野があります。比較して仕事にあった車両を選ぶことが重要です。最も重要な性能は<!cl:capacity:容量>です。1台の車両がどれだけの<!cl:passengers:乗客>を運べるかを意味します。容量が一杯になっていると車両は最も多くの利益を出します。;
   vehicle_info_2=また車両には最低効率が<!cl:e.vehicle_a70:表示>されています。低い<!cl:demand:需要価格>の<!cl:destination:目的地>は多くの最低乗客数を必要とし、高い需要価格の目的地であれば、最低乗客数は少なくなります。より多くの乗客を必要とする車両は一杯になるとより多くの利益を出しますが、空車で運行した際にもより多くのコストがかかります。;
   vehicle_info_3=一部のルートはそもそも利益が出ません。ですが、<!cl:city:都市>が成長して<!cl:demand:需要価格>が上がると長期的にそれが変わる場合もあります。最初の<!cl:route:ルート>にはより利益が出せるものを優先しましょう。;
@@ -1803,6 +2066,8 @@ Tutorial
   competition=競合;
   competition_info_1=ある段階で他の会社と<!cl:passengers:乗客>を求めて競合することになります。これが助けになる場合もあります。例えば、<!cl:city:都市>の需要をすべて満たせるリソースが自社にない場合です。;
   competition_info_2=競合を排除する最も簡単な方法は買収です。ですが、これには買収できるだけの資金が必要になります。買収ができないのであれば、都市の<!cl:trust:信頼度>を競い合うことになります。信頼度で優位に立つことができれば、他社の<!cl:hub:ハブ>を強制的に安く買うことができますが、難易度を高く設定していると他社も同様のことが可能になります。;
+  shares_info_1=各社の<!cl:company_shares:会社株式>は複数に分かれています。会社ウィンドウの円形表示では、それぞれの株の所有者を確認できます。その下のボタンから1株を購入できます。保有している株式1株ごとに、会社の<!cl:operating_profit:営業利益>の一部を毎<!cl:month:月>受け取れます。;
+  shares_info_2=8株すべてを保有すると、その会社を買収できます。買収した会社は、吸収合併、子会社化、または清算することができます。ライバルもあなたの保有株を購入できるため、経営権を守るには株を買い戻しましょう。;
 }
 
 Mods
@@ -1900,8 +2165,9 @@ Mods
   d_shares_min_price=株式1つあたりの最低価格。;
   d_shares_unlock_months=株式のアンロック間隔。1つ目の株式は所有者用にアンロックされています。;
   d_shares_bought_modifier=株式の購入ステップごとの株式価格の変化。;
-  d_shares_dividends=デフォルトの配当額。;
+  d_shares_dividends=前月の営業利益のうち、配当として支払われる割合。;
   d_shares_tax=株式を売却した際に支払う税金の額。;
+  d_shares_market_premium=大きな買い手に対する株価の割増。価格には、1にこの値と全会社の価値に占める買い手の割合を掛けたものを足した倍率が掛けられます。;
   d_mesh_albedo=カラーRGBテクスチャ。;
   d_mesh_settings=R：メタリック、G：ラフネス、B：AO;
   d_mesh_normals=ノーマルテクスチャ。;
@@ -1939,6 +2205,8 @@ Mods
   d_demand_price_min=目的地価格の最小値。100で割るとパーセントが出ます。;
   d_demand_price_d_step=しきい値ごとに減少する目的地価格の上限。;
   d_demand_price_d_start=目的地価格の上限減少に必要な都市のレベル。;
+  d_first_leg_fare=旅程の最初の乗り物に乗る乗客の運賃倍率。;
+  d_transfer_fare=乗り換え後のすべての乗り物に乗る乗客の運賃倍率。;
   d_hub_price_discover=ディスカバーモードでのハブ価格。;
   d_hub_level_cost_discover=ディスカバーモードでのハブアップグレード価格はレベルと乗算。;
   d_hub_maintenance_discover=ディスカバーモードでのハブ維持価格はレベルと乗算。;
@@ -1946,6 +2214,7 @@ Mods
   d_hub_max_vehicles=ハブ車両保管はレベルと乗算。;
   d_hub_level_cost=ハブアップグレード価格はレベルと乗算。;
   d_hub_maintenance=ハブ維持価格はレベルと乗算。;
+  d_hub_maintenance_city_level=レベルごとのハブ維持費に 1 +（都市レベル ÷ この値）の 2 乗を掛けます。大きな都市のハブほど費用が高くなります。0 で一定になります。;
   d_hub_manager_price=ハブマネージャーの価格。;
   d_hub_manager_tax=ハブマネージャーの税金。;
   d_buyout_trust=ハブを買収するために必要な信頼度。;
@@ -1957,6 +2226,7 @@ Mods
   d_passenger_max_search_connections=乗客が目的に向かう際に行う乗り換えの最大数。;
   d_passenger_max_search_distance=直線距離を基準にした乗客が目的地に到達するために探索する最長距離。;
   d_passenger_max_search_best_path=乗客は目的地ごとに最適な経路を登録し、その距離は待っている乗客の数と待ち時間に応じて増加します。この補正値を増やすことで乗客は最適な経路を待たず、あまり効率的でない経路を早く選ぶようになります。;
+  d_passenger_transfer_seats=接続ごとに、その乗り物の何便分まで乗り換え客が待てるか。超えると満員になり、乗り物が追いつくまで新しい乗り換え客は別の経路を使います。0 で無効。;
   d_passenger_returnal_waiting_threshold=乗客がどれだけ早く帰宅したがるかの補正値。;
   d_max_returning_passengers=目的地ごとの帰宅する乗客の最大数。;
   d_servicing_bus_station=道路車両が駅に入る際のコスト。;
@@ -1987,6 +2257,7 @@ Mods
   d_color_stats=統計のテキスト色。;
   d_color_link=リンクのテキスト色。;
   d_color_cheat=チートの色。;
+  d_color_note=注記やヒントの文字色。;
   d_sprite_offset=スプライトオフセットベクトル。;
   d_sprite_overlay=よりディテールを加えるためのパネルオーバーレイテクスチャ。;
   d_sprite_inner=スプライトを9個のパーツに分割するパネルの内側の矩形。;
@@ -2003,6 +2274,26 @@ Mods
   d_currency_order=どのように通貨を表示するか。通貨に応じて{symbol}と{amount}を正しい順番で使用してください。<>の中の!nbは、通貨のテキストが途中で改行されるのを防ぎます。;
   existing_item=既存のアイテムを選択;
   usage=MODのシステムを使って新しいコンテンツを作成したり、既存のものを編集したりできます。変更を確認するには、再ロードボタンを押してください。複数の翻訳を準備したい場合は、言語ボタンを使ってMODの言語を変更してください。;
+  d_bus_wait_share=道路車両が停車時間を超えて満載を待つ1時間ごとに支払う、走行1時間あたりの運行費の割合（%）。;
+  d_train_wait_share=列車が停車時間を超えて満載を待つ1時間ごとに支払う、走行1時間あたりの運行費の割合（%）。;
+  d_plane_wait_share=飛行機が空港での時間を超えて満載を待つ1時間ごとに支払う、飛行1時間あたりの運行費の割合（%）。;
+  d_ship_wait_share=船が港での時間を超えて満載を待つ1時間ごとに支払う、航行1時間あたりの運行費の割合（%）。;
+  d_countries=適用される国。空欄を利用して全ての国に適用するか、ISOコードをカンマ区切りで指定して特定の国に限定する。（e.g. DE, FR）;
+  d_rail_sleeper_color=レールの下の枕木の色。;
+  d_rail_gauge=レール間の距離（ミリメートル）。標準軌は1435。;
+  d_road_centre=追い越しが許可されている区間の中央線：None, Dashed, Solid, Double;
+  d_road_no_passing=追い越しが禁止されている区間の中央線。片方向だけ追い越し禁止の場合、Doubleはその側が実線、反対側が破線で描かれます。;
+  d_road_edge=道路の両端に沿った線。;
+  d_road_color=この線の塗装色。;
+  d_road_dash=車線境界線の線の長さと間隔をカンマ区切りで指定（e.g. 0.6, 0.9）;
+  d_tag_logo=このタグが対象とする会社ロゴ。名前の単語用のタグなら - を選択。;
+  d_tag_word=このタグが対象とする社名の単語。ローカライズのCompanyNameGenInputセクションのキー。;
+  d_tag_modes=この会社が利用できる輸送手段をカンマ区切りで指定、デフォルトはall:road, train, plane, ship, all;
+  d_tag_area=ハブ都市が含まれる範囲（度、開始と終了）。全範囲ならどこでも対象。;
+  d_tag_weight=対象となるものの中で選ばれる頻度。初期値は10。;
+  save_failed=保存できません;
+  save_failed_info={file}を保存できません。ファイルが読み取り専用になっていたり、他のプログラムが開いていないか確認してください。;
+  load_error=エラー;
 }
 
 Multiplayer
@@ -2056,6 +2347,8 @@ Multiplayer
   failed_to_load_mods=サーバー上のMODとクライアント上のMODが一致しません。MODの自動ダウンロードに失敗しました。ホストと同じMODがロードされていることを確認してください。;
   enter_ip=IPv4アドレスを入力;
   enter_ip_info=接続先サーバーのIPv4アドレスを入力してください。;
+  multiplayer_steam=Steam;
+  multiplayer_gog=GOG;
 }
 
 MapNames
@@ -2105,7 +2398,7 @@ MapNames
   c_Deutschland=ドイツ;
   c_Djibouti جيبوتي=ジブチ;
   c_Danmark=デンマーク;
-  c_Dominica=ドミニカ国;
+  c_Dominica=ドミニカ;
   c_República Dominicana=ドミニカ共和国;
   c_Algérie ⵍⵣⵣⴰⵢⴻⵔ الجزائر=アルジェリア;
   c_Ecuador=エクアドル;
@@ -3207,7 +3500,7 @@ MapNames
   Deutschland_Passau=パッサウ;
   Deutschland_Cuxhaven=クックスハーフェン;
   Deutschland_Gronau=グロナウ;
-  Djibouti جيبوتي_Djibouti جيبوتي=ジブチシティ;
+  Djibouti جيبوتي_Djibouti جيبوتي=ジブチ;
   Danmark_København=コペンハーゲン;
   Danmark_Aarhus=オーフス;
   Danmark_Odense=オーデンセ;
